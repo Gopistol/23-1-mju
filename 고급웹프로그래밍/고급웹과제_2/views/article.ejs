@@ -1,0 +1,62 @@
+<!-- 고급웹프로그래밍(6084) 과제 #2 고건 60221300 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/front.css">
+    <title>기사 등록</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <%- include('./header'); %>
+        </header>
+        
+        <div class="main">
+
+            <% if (user) { %>
+                <p class="greet"><span class="username"><%= userId %></span>님 환영합니다.</p>
+            <% } %>
+
+            <div class="article_area">
+                <form action="/articles" method="post" id="input_content_form">
+                    <p class="article_input">새로운 기사를 입력하세요.</p>
+                    <div>
+                        <textarea name="content" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="article_button" onclick="sumbitArticle()">등록</button>
+                    </div>
+                </form>
+
+                <form action="/articles" id="article_number_form">
+                    <p class="article_number_p">수정/삭제할 기사 번호를 입력하세요.</p>
+                    <div>
+                        <input type="text" class="input_article_number" name="article_number" onchange="submitArticleNumber()">
+                        <button type="submit" id="edit" class="article_select_button" onclick="editArticle()">수정</button>
+                        <button type="submit" id="delete" class="article_select_button" onclick="deleteArticle()">삭제</button>
+                    </div>
+                </form>
+                    
+                <div class="articles_area">
+                    <ul id="list">
+                        <% for (let i = 0; i < articles.length; i++) { %>
+                            <% if (articles[i] !== null && articles[i] !== undefined) { %> 
+                        <li><%= articles[i].id %>. <%= articles[i].content %></li>
+                            <% } %>
+                        <% } %>
+                    </ul>
+                </div>        
+            </div>
+        </div>
+
+        <footer>
+            <%- include('./footer'); %>
+        </footer>
+    </div>  
+</body>
+<script src="/front.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>

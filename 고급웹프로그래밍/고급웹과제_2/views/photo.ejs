@@ -1,0 +1,63 @@
+<!-- 고급웹프로그래밍(6084) 과제 #2 고건 60221300 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/front.css" />
+    <title>기사 사진 업로드</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <header><%- include('./header'); %></header>
+
+      <div class="main">
+        <% if (user) { %>
+        <p class="greet">
+          <span class="username"><%= userId %></span>님 환영합니다.
+        </p>
+        <% } %>
+        <p class="photo_p">최근 기사 사진을 올리세요.</p>
+
+        <div class="photo_area">
+          <form
+            id="form"
+            action="/upload"
+            class="upload_form"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="file_input">
+              <label class="choose_title">전송할 파일</label>
+              <div class="button">
+                <label for="chooseFile" class="chooseFile"> 파일 선택 </label>
+              </div>
+              <input
+                type="file"
+                id="chooseFile"
+                class="photo_select_input"
+                onchange="loadFileName(this)"
+                accept="image/*"
+                name="manyImages"
+                multiple
+              />
+            </div>
+            <div class="fileInput">
+              <p>Filename:&nbsp;</p>
+              <p id="fileName"></p>
+            </div>
+            <div class="file_input_button">
+              <button type="submit" class="upload_button" onclick="isFileSelected()">사진 업로드</button>
+            </div>
+          </form>
+        </div>
+        <div class="filenames_area">
+          <% if (filenames) { %> <%= filenames %>가 업로드되었습니다. <% } %>
+        </div>
+      </div>
+      <footer><%- include("./footer") %></footer>
+    </div>
+  </body>
+  <script src="/front.js"></script>
+</html>

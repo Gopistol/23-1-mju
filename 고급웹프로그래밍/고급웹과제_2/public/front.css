@@ -1,0 +1,285 @@
+/* 고급웹프로그래밍(6084) 과제 #2 고건 60221300 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Work+Sans:wght@500;600;700&display=swap');
+body {
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
+    background-color: #9191b746;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+header {
+    margin: 10px;
+}
+
+a {
+    margin-left: 5px;
+    text-decoration-line: none;
+}
+
+h2 {
+    color: rgb(67, 67, 67);
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.wrap {
+    margin-bottom: 20px;
+    height: 100%;
+    width:  80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(243, 249, 255);
+    border-radius: 13px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.main {
+    justify-content: center;
+}
+
+.guide {
+    font-size: 23px;
+}
+
+.greet {
+    font-size: 23px;
+}
+
+.username {
+    color:rgb(255, 102, 161)
+}
+
+.id_input {
+    font-size: 19px;
+    /* border-radius: 5px;
+    border: 1px solid #bdc6ce; */
+    background: #fff;
+    background-color: #ffffff;
+    border: 2px solid #0000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.login_button {
+    margin-left: 5px;
+    margin-bottom: 20px;
+    padding-top: 3px;
+    border: 1px solid #003e81;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    background-color: #004c9e;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.article_button {
+    height: 28px;
+    margin-bottom: 10px;
+    width: 60px;
+    background: #fff;
+    background-color: #fff9ee;
+    border: 1px solid #004c9e;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    background-color: #004c9e;
+}
+
+.article_input {
+    font-size: 20px;
+}
+
+/* .article_area {
+    background-color: red;
+} */
+
+.articles_area {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #e4e4e446;
+    width: 100%;
+    border-radius: 10px;
+    border: 0.5px solid #0000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+textarea {
+    align-items: center;
+    background: #fff;
+    background-color: #ffffff;
+    border: 2px solid #0000;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    /* display: flex; */
+    overflow: hidden;
+    max-width: 290px;
+    height: 100px;
+    max-height: 150px;
+    min-height: 100px;
+    min-width: 290px;
+    padding: 1rem;
+    margin-bottom: 10px;
+    transition: width .5s cubic-bezier(.6, .05, .28, .91);
+    }
+
+.article_number_p {
+    font-size: 20px;
+}
+
+.input_article_number {
+    margin-right: 5px;
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+    background: #fff;
+    background-color: #ffffff;
+    border: 2px solid #0000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.article_select_button {
+    height: 24px;
+    margin-left: 3px;
+    margin-bottom: 15px;
+    width: 40px;
+    background: #fff;
+    background-color: #fff9ee;
+    border: 1px solid #003e81;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: #004c9e;
+}
+
+.photo_area {
+
+    display: block;
+    background: #fff;
+    background-color: #ffffff;
+    border: 2px solid #0000;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width: 290px;
+}
+
+
+
+.filenames_area{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green;  */
+    background: #fff;
+    background-color: #e4e4e446;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 290px;
+}
+
+.photo_p {
+    font-size: 20px;
+}
+
+.select_file {
+    background-color: red;
+}
+
+.photo_select_input {
+    margin-top: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(30, 30, 30);
+    background-color: #ececec;
+}
+
+.choose_title {
+    font-size: 18px;
+}
+
+.chooseFile {
+    cursor: pointer;
+}
+
+#chooseFile {
+    visibility: hidden;
+}
+
+.file_input {
+    margin-bottom: -10px;
+}
+
+.fileInput {
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    align-items: center;
+    border-bottom: solid 2px black;
+    width: 97%;
+    height: 30px;
+}
+
+.file_input_button {
+    margin-bottom: 10px;
+}
+
+.button {
+    margin-top: 10px;
+ 
+}
+
+.chooseFile {
+    padding-bottom: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 1px solid #003e81;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: #004c9e;
+
+}
+
+.upload_button {
+    padding: 3px;
+    border: 1px solid #003e81;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: #004c9e;
+}

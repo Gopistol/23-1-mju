@@ -1,0 +1,35 @@
+<!-- 고급웹프로그래밍(6084) 과제 #2 고건 60221300 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/front.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css"
+    />
+    <title>사용자 로그인</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <header><%- include('./header'); %></header>
+      <div class="main">
+        <% if (!user) { %>
+        <p class="guide">사용자 아이디를 입력하세요.</p>
+        <form action="/login" method="post" class="input_id_form">
+          <input type="text" class="id_input" name="id" />
+          <button type="submit" class="login_button" onclick="isIdTyped()">로그인</button>
+        </form>
+        <% } else { %>
+        <p class="greet">
+          <span class="username"><%= userId %></span>님 환영합니다.
+        </p>
+        <% } %>
+      </div>
+
+      <footer><%- include('./footer'); %></footer>
+    </div>
+  </body>
+</html>
